@@ -22,10 +22,10 @@ header{
 }
 
 .nav-container{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     color: white;
-    height: 102px;
+    height: 6.375rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -41,6 +41,7 @@ header{
 
 .nav-item{
     margin-right: 2.5rem;
+    padding: 0.1em;
 }
 
 .nav-container li:nth-child(5){
@@ -50,7 +51,7 @@ header{
 }
 
 .nav-container li a, a.button-link{
-    text-decoration: none;
+    /* text-decoration: none; */
     color: white;
     scroll-behavior: smooth;
 }
@@ -65,7 +66,21 @@ header{
 }
 
 .offcanvas-end{
-    background-color: transparent;
+    background-color: transparent !important;
+}
+.button-text{
+    border-radius: 16px;
+    padding: 0.1em 0.4em;
+    backdrop-filter: blur(15px);
+    transition: transform .30s;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+.button-text:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
 }
 
 .navbar-light .navbar-toggler {
@@ -456,6 +471,9 @@ form input{
         align-items: flex-start;
         line-height: 2rem;
     }
+    .nav-container{
+        padding: 1em;
+    }
 
     .navbar-light .navbar-nav .nav-link{
         padding: 0;
@@ -467,13 +485,18 @@ form input{
      .offcanvas-end{
         background-image: linear-gradient(rgb(119, 53, 216),rgb(30, 255, 49));
     }
+    .button-text{
+        padding:0  0.1em;
+        margin: 0 0 1em;
+    }
 
 }
 
 @media only screen and (max-width: 767px) {
     
     .nav-container{
-        width: 60%;
+        width:100% ;
+        padding: 1em;
     }
    
 
@@ -550,7 +573,8 @@ form input{
 
 @media only screen and (max-width: 625px) {
     .nav-container{
-        width: 80%;
+        width: 100%;
+        padding: 1em;
         
         /* justify-content: center; */
     }
